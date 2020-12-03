@@ -13,6 +13,7 @@ Display de informação de ambiente (Microsite) -
 Funcionamento do sensor de ultrassons - 
 Ativação manual do sensor de ultrassons (Microsite) - 
 Desenvolvimento do microsite - 
+Escrita do Artigo - 
 
 //Comunicação sensores/microsite\\
 Sensor Humidade - 
