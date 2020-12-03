@@ -1,4 +1,4 @@
-# Frinal-Project-SE
+# Final-Project-SE
 Smart Greenhouse Management
 
 //Tarefas\\
