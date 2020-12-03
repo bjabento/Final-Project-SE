@@ -1,5 +1,5 @@
 # Frinal-Project-SE
-Smart Greenhouse management
+Smart Greenhouse Management
 
 //Tarefas\\
 Leitura Humidade do solo - 
