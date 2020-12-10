@@ -1,0 +1,46 @@
+#include <DHT.h>
+
+#define DHTTYPE DHT11
+#define DHTPIN 7  
+
+DHT dht(DHTPIN, DHTTYPE);
+
+int vLDR = 0;
+float hum, temp;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(A0, INPUT);
+  pinMode(10, OUTPUT);
+  Serial.println(F("DHTxx test!"));
+  dht.begin();
+}
+
+void loop() {
+  //LDR
+  vLDR = analogRead(A0);
+  Serial.println(vLDR);
+  vLDR = map(vLDR, 344, 1017, 0, 255);
+  analogWrite(10, vLDR);
+
+  //DHT11
+  //Ler Humidade
+  hum = dht.readHumidity();
+  //Ler Temperatura(ºC
+  temp = dht.readTemperature();
+
+  //Verifica se houve error
+  if (isnan(hu) || isnan(te)) {
+    Serial.println(F("Falha ao ler o sensor"));
+    return;
+  }
+  else {
+    Serial.print("Humidade: ");
+    Serial.print(hum);
+    Serial.print(" %t");
+    Serial.print("Temperatura: ");
+    Serial.print(temp);
+    Serial.println(" ºC");
+  }
+  delay(5000);
+}
