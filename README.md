@@ -4,7 +4,7 @@ Smart Greenhouse Management
 //Tarefas\\
 Leitura Humidade do solo - X
 Ativar motor servo (rega) - T
-Leitura da luminosidade - X
+Leitura da luminosidade - T
 Ativação automática dos LED's - X
 Ativação manual dos LED's (Microsite) - X
 Leitura qualidade do ar - T
