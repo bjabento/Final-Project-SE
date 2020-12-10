@@ -1,0 +1,77 @@
+#include <DHT.h>
+#define DHTTYPE DHT11
+#define DHTPIN 7
+DHT dht(DHTPIN, DHTTYPE);
+//Servo s1;
+
+int map1, n = 30, pos = 0;
+const int pinAlarme = 2;
+float hum, temp;
+long dist = 0;
+volatile bool alarme = false; //Inicializado a false pois o utilizador liga o alarme quando quiser
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(4, OUTPUT);
+  pinMode(3, INPUT);
+  pinMode(7, OUTPUT);
+  pinMode(A0, INPUT);
+  pinMode(10, OUTPUT);
+  dht.begin();
+  //s1.attach (10);
+   attachInterrupt(digitalPinToInterrupt(pinAlarme), intruso, RISING);
+}
+
+void loop()
+{ 
+  if(alarme != false)
+  {
+    digitalWrite(4, LOW);
+    delayMicroseconds(2);
+    digitalWrite(4, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(4, LOW);
+
+    dist = (pulseIn(3, HIGH) /29 /2);
+
+    if(dist < 10)
+      digitalWrite(7, HIGH);
+    else
+      digitalWrite(7, LOW);
+
+    Serial.println("Distancia: ");
+    Serial.println(dist);
+  }
+/*
+  //Servo
+  s1.write(pos);
+  //Leitura Humidade
+ hum = dht.readHumidity();
+ //Leitura temperatura
+ temp = dht.readTemperature();
+  //Verifica se houve erros
+  if (isnan(hu) || isnan(te)) {
+    Serial.println(F("Falha ao ler o sensor"));
+    return;
+  }
+  else {
+    Serial.print("Humidade: ");
+    Serial.print(hum);
+    Serial.print(" %t");
+    Serial.print("Temperatura: ");
+    Serial.print(temp);
+    Serial.println(" ºC");
+    while ( hum < 20)
+    {
+      //Verificar melhor posi??o - POR FAZER
+      pos = 90;
+      s1.write(pos);
+    }
+    }
+  }*/
+}
+
+void intruso()
+{
+  alarme = !alarme;
+}
