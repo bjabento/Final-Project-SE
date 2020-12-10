@@ -7,11 +7,11 @@ Ativar motor servo (rega) - T
 Leitura da luminosidade - 
 Ativação automática dos LED's - 
 Ativação manual dos LED's (Microsite) - 
-Leitura qualidade do ar - 
-Leitura da temperatura - 
+Leitura qualidade do ar - T
+Leitura da temperatura - T
 Display de informação de ambiente (Microsite) - 
-Funcionamento do sensor de ultrassons - 
-Ativação manual do sensor de ultrassons (Microsite) - 
+Funcionamento do sensor de ultrassons - V
+Ativação manual do sensor de ultrassons (Microsite) - V
 Desenvolvimento do microsite - 
 Escrita do Artigo - 
 
