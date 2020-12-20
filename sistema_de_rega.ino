@@ -39,7 +39,7 @@ void loop() {
     Serial.println(" ºC");
     while ( hum < 20)
     {
-      //Verificar melhor posi??o - POR FAZER
+      //Verificar melhor posicao - POR FAZER
       pos = 90;
       s1.write(pos);
     }
