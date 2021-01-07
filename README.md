@@ -10,11 +10,11 @@ Smart Greenhouse Management
 <li>Ativação manual dos LED's (Microsite) - V
 <li>Leitura qualidade do ar - T
 <li>Leitura da temperatura - T
-<li>Display de informação de ambiente (Microsite) - X
+<li>Display de informação de ambiente (Microsite) - V
 <li>Funcionamento do sensor de ultrassons - T
 <li>Ativação manual do sensor de ultrassons (Microsite) - V
 <li>Desenvolvimento do microsite - V
-<li>Escrita do Artigo - X
+<li>Escrita do Artigo - Em desenvolvimento
 <ul>
   
 ### Comunicação sensores/microsite
